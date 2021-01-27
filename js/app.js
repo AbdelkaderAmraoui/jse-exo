@@ -65,11 +65,10 @@ function init() {
     var handlers = [handleClickPa, handleClickPb, handleClickPc,
                     handleClickPd, handleClickPe, handleClickPf,
                     handleClickPg, handleClickPh, handleClickPi,
-                    handleClickPj]
+                    handleClickPj];
+    var ps = document.getElementsByTagName("p");
     for (var i = 0; i < letters.length; i++) {
-        console.log(letters[i]);
-        var p = document.getElementById(letters[i]);
-        p.addEventListener("click", handlers[i]);
+        ps[i].addEventListener("click", handlers[i]);
     }
 }
 
