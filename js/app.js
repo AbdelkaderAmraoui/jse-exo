@@ -61,26 +61,16 @@ function handleClickPj() {
 function init() {
     // This code will be executed when page is completely loaded.
     console.log("Page loaded!");
-    var pa = document.getElementById("a");
-    pa.addEventListener("click", handleClickPa);
-    var pb = document.getElementById("b");
-    pb.addEventListener("click", handleClickPb);
-    var pc = document.getElementById("c");
-    pc.addEventListener("click", handleClickPc);
-    var pd = document.getElementById("d");
-    pd.addEventListener("click", handleClickPd);
-    var pe = document.getElementById("e");
-    pe.addEventListener("click", handleClickPe);
-    var pf = document.getElementById("f");
-    pf.addEventListener("click", handleClickPf);
-    var pg = document.getElementById("g");
-    pg.addEventListener("click", handleClickPg);
-    var ph = document.getElementById("h");
-    ph.addEventListener("click", handleClickPh);
-    var pi = document.getElementById("i");
-    pi.addEventListener("click", handleClickPi);
-    var pj = document.getElementById("j");
-    pj.addEventListener("click", handleClickPj);
+    var letters = "abcdefghij";
+    var handlers = [handleClickPa, handleClickPb, handleClickPc,
+                    handleClickPd, handleClickPe, handleClickPf,
+                    handleClickPg, handleClickPh, handleClickPi,
+                    handleClickPj]
+    for (var i = 0; i < letters.length; i++) {
+        console.log(letters[i]);
+        var p = document.getElementById(letters[i]);
+        p.addEventListener("click", handlers[i]);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", init);
