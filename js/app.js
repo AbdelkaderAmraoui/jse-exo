@@ -4,13 +4,11 @@ function handleClickP(e) {
 }
 
 
-
 function init() {
     // This code will be executed when page is completely loaded.
     console.log("Page loaded!");
-    var letters = "abcdefghij";
     var ps = document.getElementsByTagName("p");
-    for (var i = 0; i < letters.length; i++) {
+    for (var i = 0; i < ps.length; i++) {
         ps[i].addEventListener("click", handleClickP);
     }
 }
