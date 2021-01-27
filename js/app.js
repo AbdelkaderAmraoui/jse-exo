@@ -1,5 +1,7 @@
 function handleClickPa() {
     console.log("a clicked!");
+    var pa = document.getElementById("a");
+    pa.classList.add("gbox");
 }
 
 function init() {
